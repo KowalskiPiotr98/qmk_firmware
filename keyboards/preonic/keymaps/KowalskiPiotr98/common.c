@@ -9,5 +9,9 @@ enum preonic_keycodes
     BracketWrap,
     SqBracketWrap,
     GraveWrap,
-    SpaceWrap
+    SpaceWrap,
+    WindowLeft,
+    WindowUp,
+    WindowDown,
+    WindowRight
 };
