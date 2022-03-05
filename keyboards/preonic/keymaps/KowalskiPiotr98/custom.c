@@ -1,10 +1,6 @@
 #include QMK_KEYBOARD_H
-
-enum preonic_keycodes
-{
-    Lambda = SAFE_RANGE,
-    Nequal
-};
+#include "common.c"
+#include "word_surround.c"
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record)
 {
@@ -17,6 +13,13 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record)
         case Nequal:
             if (record->event.pressed)
                 SEND_STRING("!=");
+            break;
+        case SpaceWrap:
+        case GraveWrap:
+        case SqBracketWrap:
+        case BracketWrap:
+        case QuotWrap:
+            process_surround(keycode, record);
             break;
     }
 
