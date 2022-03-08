@@ -6,6 +6,8 @@
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record)
 {
+    uint8_t mods = get_mods();
+
     switch (keycode)
     {
         case Lambda:
@@ -21,7 +23,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record)
         case WindowUp:
         case WindowDown:
             move_window(keycode, record);
-            break;
+            set_mods(mods);
+            return false;
         case SpaceWrap:
         case GraveWrap:
         case SqBracketWrap:
@@ -29,10 +32,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record)
         case QuotWrap:
         case InnerSel:
             process_surround(keycode, record);
-            break;
+            set_mods(mods);
+            return false;
         case EscQuot:
             process_print_escaped(keycode, record);
-            break;
+            set_mods(mods);
+            return false;
     }
 
     return true;
