@@ -41,7 +41,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // word wrapping layer
     [6] = LAYOUT_ortho_5x12(
         GraveWrap, _______, _______, _______, _______, _______, _______, _______, _______, BracketWrap, BracketWrap, _______,
-        _______, _______, _______, _______, _______, _______, _______, _______, _______, SqBracketWrap, SqBracketWrap, _______,
+        _______, _______, InnerSel, _______, _______, _______, _______, _______, _______, SqBracketWrap, SqBracketWrap, _______,
         _______, _______, SpaceWrap, _______, _______, _______, _______, _______, _______, _______, _______, QuotWrap,
         KC_TRNS, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_TRNS,
         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, _______, _______, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, _______),
