@@ -2,6 +2,7 @@
 #include "common.c"
 #include "word_surround.c"
 #include "window_move.c"
+#include "escaped_characters.c"
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record)
 {
@@ -26,7 +27,11 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record)
         case SqBracketWrap:
         case BracketWrap:
         case QuotWrap:
+        case InnerSel:
             process_surround(keycode, record);
+            break;
+        case EscQuot:
+            process_print_escaped(keycode, record);
             break;
     }
 
