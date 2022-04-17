@@ -38,6 +38,14 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record)
             process_print_escaped(keycode, record);
             set_mods(mods);
             return false;
+        case Shrug:
+            if (record->event.pressed)
+            {
+                del_mods(get_mods());
+                send_unicode_string("¯\\_(ツ)_/¯");
+                set_mods(mods);
+            }
+            return false;
     }
 
     return true;

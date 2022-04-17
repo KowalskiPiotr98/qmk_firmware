@@ -15,5 +15,6 @@ enum preonic_keycodes
     WindowDown,
     WindowRight,
     EscQuot,
-    InnerSel
+    InnerSel,
+    Shrug
 };
