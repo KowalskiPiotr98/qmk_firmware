@@ -28,8 +28,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_TRNS, KC_TRNS, KC_TRNS, MO(6), _______, _______, _______, KC_TRNS, _______, KC_TRNS, KC_TRNS, _______),
 	[4] = LAYOUT_ortho_5x12(
         _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_MINS, KC_EQL, _______,
-        _______, Nequal, _______, _______, _______, _______, _______, _______, Lambda, KC_LBRC, KC_RBRC, KC_BSLS,
-        _______, _______, Shrug, _______, _______, _______, _______, _______, _______, _______, _______, EscQuot,
+        _______, Nequal, Shrug, _______, _______, _______, _______, _______, Lambda, KC_LBRC, KC_RBRC, KC_BSLS,
+        _______, KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0, EscQuot,
         KC_TRNS, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_TRNS,
         KC_TRNS, KC_TRNS, KC_TRNS, MO(5), _______, _______, _______, _______, KC_TRNS, KC_TRNS, KC_TRNS, _______),
 	[5] = LAYOUT_ortho_5x12(
