@@ -10,10 +10,6 @@ enum preonic_keycodes
     SqBracketWrap,
     GraveWrap,
     SpaceWrap,
-    WindowLeft,
-    WindowUp,
-    WindowDown,
-    WindowRight,
     EscQuot,
     InnerSel,
     Shrug
