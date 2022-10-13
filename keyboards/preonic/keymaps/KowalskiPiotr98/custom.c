@@ -34,7 +34,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record)
             if (record->event.pressed)
             {
                 del_mods(get_mods());
-                send_unicode_string("¯\\_(ツ)_/¯");
+                //this requires a custom software under Windows to display properly
+                //send_unicode_string("¯\\_(ツ)_/¯");
                 set_mods(mods);
             }
             return false;
