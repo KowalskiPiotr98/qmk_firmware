@@ -34,8 +34,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record)
             if (record->event.pressed)
             {
                 del_mods(get_mods());
-                SEND_STRING(SS_LSFT(SS_LCTL("u"))"AF"SS_TAP(X_SPC)"\\_("SS_LSFT(SS_LCTL("u"))"30c4"SS_TAP(X_SPC)")_/"SS_LSFT(SS_LCTL("u"))"AF"SS_TAP(X_SPC));
-                send_unicode_string("¯");
+                send_unicode_string("¯\\_(ツ)_/¯");
                 set_mods(mods);
             }
             return false;
