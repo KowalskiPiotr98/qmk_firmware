@@ -39,6 +39,18 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record)
                 set_mods(mods);
             }
             return false;
+        case LCTL:
+            if (record->event.pressed)
+                register_code(KC_LCTL);
+            else
+                unregister_code(KC_LCTL);
+            return true;
+        case LGUI:
+            if (record->event.pressed)
+                register_code(KC_LGUI);
+            else
+                unregister_code(KC_LGUI);
+            return true;
     }
 
     return true;

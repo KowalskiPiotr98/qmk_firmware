@@ -12,5 +12,7 @@ enum preonic_keycodes
     SpaceWrap,
     EscQuot,
     InnerSel,
-    Shrug
+    Shrug,
+    LCTL,
+    LGUI
 };
