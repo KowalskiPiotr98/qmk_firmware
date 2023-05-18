@@ -3,6 +3,44 @@
 #include "word_surround.c"
 #include "escaped_characters.c"
 
+int winSwapEnabled = 0;
+
+void press_left_most_key(bool pressed)
+{
+    if (pressed)
+    {
+        if (winSwapEnabled)
+            register_code(KC_LCTL);
+        else
+            register_code(KC_LGUI);
+    }
+    else
+    {
+        if (winSwapEnabled)
+            unregister_code(KC_LCTL);
+        else
+            unregister_code(KC_LGUI);
+    }
+}
+
+void press_second_left_most_key(bool pressed)
+{
+    if (pressed)
+    {
+        if (winSwapEnabled)
+            register_code(KC_LGUI);
+        else
+            register_code(KC_LCTL);
+    }
+    else
+    {
+        if (winSwapEnabled)
+            unregister_code(KC_LGUI);
+        else
+            unregister_code(KC_LCTL);
+    }
+}
+
 bool process_record_user(uint16_t keycode, keyrecord_t *record)
 {
     uint8_t mods = get_mods();
@@ -39,17 +77,17 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record)
                 set_mods(mods);
             }
             return false;
-        case LCTL:
+        case WinSwap:
             if (record->event.pressed)
-                register_code(KC_LCTL);
-            else
-                unregister_code(KC_LCTL);
+            {
+                winSwapEnabled = 1;
+            }
+            return false;
+        case LCTL:
+            press_second_left_most_key(record->event.pressed);
             return true;
         case LGUI:
-            if (record->event.pressed)
-                register_code(KC_LGUI);
-            else
-                unregister_code(KC_LGUI);
+            press_left_most_key(record->event.pressed);
             return true;
     }
 

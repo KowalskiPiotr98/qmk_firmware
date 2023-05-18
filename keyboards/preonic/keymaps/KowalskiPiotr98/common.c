@@ -13,6 +13,7 @@ enum preonic_keycodes
     EscQuot,
     InnerSel,
     Shrug,
+    WinSwap,
     LCTL,
     LGUI
 };
