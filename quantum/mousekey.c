@@ -1095,7 +1095,7 @@ bool mousekey_console(uint8_t code) {
 
     if (change) {
         if (pp) {
-            int16_t val = *pp + change;
+            int16_t val = (int16_t)(*pp + change);
             if (val > (int16_t)UINT8_MAX)
                 *pp = UINT8_MAX;
             else if (val < 0)
