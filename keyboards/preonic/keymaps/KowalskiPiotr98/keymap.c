@@ -10,14 +10,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         LGUI, LCTL, KC_LALT, MO(2), MO(1), KC_SPC, KC_RSFT, MO(3), MO(4), KC_RALT, KC_RCTL, KC_ENT),
 	[1] = LAYOUT_ortho_5x12(
         WinSwap, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
-        _______, _______, _______, _______, _______, _______, KC_WH_U, KC_WH_L, KC_WH_R, _______, _______, _______,
-        _______, _______, KC_BTN3, KC_BTN2, KC_BTN1, _______, KC_MS_L, KC_MS_D, KC_MS_U, KC_MS_R, _______, _______,
-        KC_TRNS, _______, KC_MS_ACCEL0, KC_MS_ACCEL1, KC_MS_ACCEL2, _______, KC_WH_D, _______, _______, _______, _______, KC_TRNS,
+        _______, _______, _______, _______, _______, _______, KC_WH_U, KC_WH_L, KC_MS_U, KC_WH_R, _______, _______,
+        _______, _______, KC_BTN3, KC_BTN2, KC_BTN1, _______, KC_WH_D, KC_MS_L, KC_MS_D, KC_MS_R, _______, _______,
+        KC_TRNS, _______, KC_MS_ACCEL0, KC_MS_ACCEL1, KC_MS_ACCEL2, _______, _______, _______, _______, _______, _______, KC_TRNS,
         KC_TRNS, KC_TRNS, KC_TRNS, _______, KC_TRNS, _______, _______, _______, _______, KC_TRNS, KC_TRNS, _______),
 	[2] = LAYOUT_ortho_5x12(
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
-        _______, KC_VOLU, _______, _______, _______, _______, _______, KC_HOME, KC_END, KC_PGUP, KC_PGDN, _______,
-        _______, KC_VOLD, _______, _______, _______, _______, KC_LEFT, KC_DOWN, KC_UP, KC_RGHT, _______, _______,
+        _______, KC_VOLU, _______, _______, _______, _______, KC_HOME, KC_END, KC_UP, KC_PGUP, KC_PGDN, _______,
+        _______, KC_VOLD, _______, _______, _______, _______, _______, KC_LEFT, KC_DOWN, KC_RGHT, _______, _______,
         KC_TRNS, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_TRNS,
         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, _______, _______, _______, MO(6), _______, KC_TRNS, KC_TRNS, _______),
 	[3] = LAYOUT_ortho_5x12(
