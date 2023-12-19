@@ -8,7 +8,7 @@ enum custom_keycodes {
     InnerSel,
     Shrug,
     LinuxSwap,
-    LCTL,
-    LGUI
+    LGUI,
+    LALT
 };
 

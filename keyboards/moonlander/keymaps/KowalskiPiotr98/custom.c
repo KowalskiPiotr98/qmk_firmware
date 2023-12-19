@@ -3,19 +3,19 @@
 
 int linuxSwapEnabled = 0;
 
-void press_left_most_key(bool pressed)
+void press_third_left_most_key(bool pressed)
 {
     if (pressed)
     {
         if (linuxSwapEnabled)
-            register_code(KC_LCTL);
+            register_code(KC_LALT);
         else
             register_code(KC_LGUI);
     }
     else
     {
         if (linuxSwapEnabled)
-            unregister_code(KC_LCTL);
+            unregister_code(KC_LALT);
         else
             unregister_code(KC_LGUI);
     }
@@ -28,14 +28,14 @@ void press_second_left_most_key(bool pressed)
         if (linuxSwapEnabled)
             register_code(KC_LGUI);
         else
-            register_code(KC_LCTL);
+            register_code(KC_LALT);
     }
     else
     {
         if (linuxSwapEnabled)
             unregister_code(KC_LGUI);
         else
-            unregister_code(KC_LCTL);
+            unregister_code(KC_LALT);
     }
 }
 
@@ -72,11 +72,11 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record)
                 linuxSwapEnabled = 1;
             }
             return false;
-        case LCTL:
+        case LALT:
             press_second_left_most_key(record->event.pressed);
             return true;
         case LGUI:
-            press_left_most_key(record->event.pressed);
+            press_third_left_most_key(record->event.pressed);
             return true;
     }
 

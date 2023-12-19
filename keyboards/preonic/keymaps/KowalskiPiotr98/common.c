@@ -14,6 +14,6 @@ enum preonic_keycodes
     InnerSel,
     Shrug,
     LinuxSwap,
-    LCTL,
+    LALT,
     LGUI
 };
