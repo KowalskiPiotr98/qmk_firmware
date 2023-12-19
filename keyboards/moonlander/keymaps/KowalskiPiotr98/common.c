@@ -7,7 +7,7 @@ enum custom_keycodes {
     EscQuot,
     InnerSel,
     Shrug,
-    WinSwap,
+    LinuxSwap,
     LCTL,
     LGUI
 };

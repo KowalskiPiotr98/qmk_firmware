@@ -1,20 +1,20 @@
 #include QMK_KEYBOARD_H
 #include "escaped_characters.c"
 
-int winSwapEnabled = 0;
+int linuxSwapEnabled = 0;
 
 void press_left_most_key(bool pressed)
 {
     if (pressed)
     {
-        if (winSwapEnabled)
+        if (linuxSwapEnabled)
             register_code(KC_LCTL);
         else
             register_code(KC_LGUI);
     }
     else
     {
-        if (winSwapEnabled)
+        if (linuxSwapEnabled)
             unregister_code(KC_LCTL);
         else
             unregister_code(KC_LGUI);
@@ -25,14 +25,14 @@ void press_second_left_most_key(bool pressed)
 {
     if (pressed)
     {
-        if (winSwapEnabled)
+        if (linuxSwapEnabled)
             register_code(KC_LGUI);
         else
             register_code(KC_LCTL);
     }
     else
     {
-        if (winSwapEnabled)
+        if (linuxSwapEnabled)
             unregister_code(KC_LGUI);
         else
             unregister_code(KC_LCTL);
@@ -66,10 +66,10 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record)
                 set_mods(mods);
             }
             return false;
-        case WinSwap:
+        case LinuxSwap:
             if (record->event.pressed)
             {
-                winSwapEnabled = 1;
+                linuxSwapEnabled = 1;
             }
             return false;
         case LCTL:
