@@ -1,3 +1,10 @@
+# NOTE
+
+Branches for Keychron keyboards are separate from `master` as Keychron forked their firmware at some point and merge would explode everything.
+
+This branch does contain the kinetic mousekeys implementation.
+
+
 # Quantum Mechanical Keyboard Firmware
 
 [![Current Version](https://img.shields.io/github/tag/qmk/qmk_firmware.svg)](https://github.com/qmk/qmk_firmware/tags)
